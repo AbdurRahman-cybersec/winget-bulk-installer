@@ -1,0 +1,40 @@
+# ============================================
+# WinGet Bulk Installer - Package List
+# ============================================
+# Add or remove app IDs below (one per line).
+# Lines starting with '#' are comments.
+# Find app IDs: winget search <app-name>
+# ============================================
+
+# --- Browsers ---
+Google.Chrome
+Mozilla.Firefox
+
+# --- Development ---
+Microsoft.VisualStudioCode
+Git.Git
+OpenJS.NodeJS.LTS
+Python.Python.3.12
+GitHub.cli
+
+# --- Productivity ---
+Notion.Notion
+Obsidian.Obsidian
+
+# --- Communication ---
+Zoom.Zoom
+SlackTechnologies.Slack
+Discord.Discord
+Spotify.Spotify
+
+# --- Utilities ---
+7zip.7zip
+VideoLAN.VLC
+Notepad++.Notepad++
+WinSCP.WinSCP
+PuTTY.PuTTY
+
+# --- System Tools ---
+Microsoft.PowerToys
+Microsoft.WindowsTerminal
+voidtools.Everything

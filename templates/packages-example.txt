@@ -1,0 +1,29 @@
+# Example packages.txt
+# Copy this file to packages.txt in the root of the repository and customize it with your desired apps.
+
+# --- Development Tools ---
+microsoft.visualstudiocode
+github.github-desktop
+git.git
+nodejs.nodejs
+python.python
+
+# --- Browsers ---
+google.chrome
+mozillafirefox
+brave.Brave
+
+# --- Media ---
+vlc.videolan.vlc
+spotify.spotify
+obsproject.obs-studio
+
+# --- Utilities ---
+7zip.7zip
+notepad++.notepad++
+adobereader.acrobatreader
+
+# --- Communication ---
+microsoft.teams
+slacktechnologies.slack
+zoom.zuum
