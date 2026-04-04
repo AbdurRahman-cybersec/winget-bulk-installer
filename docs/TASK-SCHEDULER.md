@@ -1,4 +1,4 @@
-# ⏲️ Automate with Task Scheduler
+# Automate with Task Scheduler
 
 Set up Windows Task Scheduler to automatically update your apps on a recurring schedule. Once configured, your software stays up to date without any manual intervention.
 
@@ -71,22 +71,22 @@ Click **"New…"** to create an action:
 | **Add arguments** | `-ExecutionPolicy Bypass -File "C:\path\to\winget-bulk-installer\scripts\Update-Apps.ps1"` |
 | **Start in** | `C:\path\to\winget-bulk-installer` |
 
-> **⚠️ Important:** Replace `C:\path\to\winget-bulk-installer` with the actual path where you cloned/extracted the repository.
+> **Important:** Replace `C:\path\to\winget-bulk-installer` with the actual path where you cloned/extracted the repository.
 
 ### 6. Conditions Tab (Optional)
 
 | Setting | Recommendation |
 |---|---|
-| **Start only if the computer is on AC power** | ☑️ (for laptops) |
-| **Wake the computer to run this task** | ☐ (optional) |
-| **Start only if network is available** | ☑️ Yes |
+| **Start only if the computer is on AC power** | (for laptops) |
+| **Wake the computer to run this task** | (optional) |
+| **Start only if network is available** | Yes |
 
 ### 7. Settings Tab
 
 | Setting | Recommendation |
 |---|---|
-| **Allow task to be run on demand** | ☑️ Yes |
-| **Run task as soon as possible after a missed start** | ☑️ Yes |
+| **Allow task to be run on demand** | Yes |
+| **Run task as soon as possible after a missed start** | Yes |
 | **Stop the task if it runs longer than** | 1 hour |
 | **If the running task does not end when requested** | Force it to stop |
 

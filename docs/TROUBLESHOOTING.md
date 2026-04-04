@@ -1,4 +1,4 @@
-# 🔧 Troubleshooting Guide
+# Troubleshooting Guide
 
 Common issues and their solutions when using WinGet Bulk Installer.
 
@@ -17,7 +17,7 @@ Common issues and their solutions when using WinGet Bulk Installer.
 
 ## WinGet Issues
 
-### ❌ "winget" is not recognized as a command
+### "winget" is not recognized as a command
 
 **Cause:** WinGet is not installed or not in your system PATH.
 
@@ -30,7 +30,7 @@ Common issues and their solutions when using WinGet Bulk Installer.
 
 ---
 
-### ❌ WinGet source errors / "Failed to update source"
+### WinGet source errors / "Failed to update source"
 
 **Cause:** Network issues or corrupted WinGet source cache.
 
@@ -45,7 +45,7 @@ winget source update
 
 ---
 
-### ❌ WinGet hangs or is very slow
+### WinGet hangs or is very slow
 
 **Cause:** First-time source indexing or network issues.
 
@@ -58,7 +58,7 @@ winget source update
 
 ## PowerShell Issues
 
-### ❌ "Execution of scripts is disabled on this system"
+### "Execution of scripts is disabled on this system"
 
 **Cause:** PowerShell execution policy blocks script files.
 
@@ -76,7 +76,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-### ❌ "Access is denied" or "requires elevation"
+### "Access is denied" or "requires elevation"
 
 **Cause:** Script needs Administrator privileges for system-wide installs.
 
@@ -87,16 +87,16 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-### ❌ Script parameters not working
+### Script parameters not working
 
 **Cause:** Syntax error when passing parameters.
 
 **Solution — correct syntax:**
 ```powershell
-# ✅ Correct
+# Correct
 .\scripts\Install-Apps.ps1 -PackageListPath "C:\my-packages.txt"
 
-# ❌ Wrong (no space after parameter name)
+# Wrong (no space after parameter name)
 .\scripts\Install-Apps.ps1 -PackageListPath="C:\my-packages.txt"
 ```
 
@@ -104,7 +104,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Script Issues
 
-### ❌ "Package list not found"
+### "Package list not found"
 
 **Cause:** The script can't find `packages.txt` at the expected path.
 
@@ -117,7 +117,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-### ❌ No log file created
+### No log file created
 
 **Cause:** The `/logs` directory couldn't be created (permissions issue).
 
@@ -130,7 +130,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-### ❌ Script completes but nothing installed
+### Script completes but nothing installed
 
 **Cause:** Package IDs in `packages.txt` may be incorrect.
 
@@ -143,7 +143,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Package Issues
 
-### ❌ "No package found matching input criteria"
+### "No package found matching input criteria"
 
 **Cause:** The package ID doesn't exist in the WinGet repository.
 
@@ -158,7 +158,7 @@ winget show --id "Exact.Package.Id"
 
 ---
 
-### ❌ Package installs wrong version
+### Package installs wrong version
 
 **Cause:** WinGet installs the latest version by default.
 
@@ -171,7 +171,7 @@ To use version pinning with the bulk installer, you'll need to modify `Install-A
 
 ---
 
-### ❌ "Installer hash does not match"
+### "Installer hash does not match"
 
 **Cause:** The installer was updated but WinGet's manifest hasn't caught up yet.
 
@@ -185,7 +185,7 @@ winget install --id "Package.Id" --force
 
 ---
 
-### ❌ Package requires a reboot
+### Package requires a reboot
 
 **Cause:** Some apps (drivers, runtimes) require a system restart.
 
@@ -195,17 +195,17 @@ winget install --id "Package.Id" --force
 
 ## Task Scheduler Issues
 
-### ❌ Task runs but nothing happens
+### Task runs but nothing happens
 
 **Solution checklist:**
-1. ☑️ Is the script path correct in **"Add arguments"**?
-2. ☑️ Is **"Run with highest privileges"** checked?
-3. ☑️ Is the **"Start in"** directory set to the project folder?
-4. ☑️ Does the task show in History? (Enable history if needed)
+1. Is the script path correct in **"Add arguments"**?
+2. Is **"Run with highest privileges"** checked?
+3. Is the **"Start in"** directory set to the project folder?
+4. Does the task show in History? (Enable history if needed)
 
 ---
 
-### ❌ Task shows "Last Run Result: 0x1"
+### Task shows "Last Run Result: 0x1"
 
 **Cause:** The script exited with an error (exit code 1).
 
@@ -216,7 +216,7 @@ winget install --id "Package.Id" --force
 
 ---
 
-### ❌ Task doesn't run when computer is locked
+### Task doesn't run when computer is locked
 
 **Solution:**
 - Set **"Run whether user is logged on or not"** in the General tab
@@ -232,4 +232,4 @@ If you're still stuck:
 2. **Search existing issues** — someone may have hit the same problem
 3. **Open a new issue** — include your Windows version, PowerShell version, WinGet version, and the error output
 
-[📝 Open an Issue](https://github.com/your-username/winget-bulk-installer/issues/new?template=bug_report.md)
+[Open an Issue](https://github.com/your-username/winget-bulk-installer/issues/new?template=bug_report.md)

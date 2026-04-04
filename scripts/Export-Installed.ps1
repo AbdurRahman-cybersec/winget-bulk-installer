@@ -51,9 +51,9 @@ if (Test-Path $jsonExport) {
     }
 
     Remove-Item $jsonExport -Force
-    Write-Host "✅ Exported $($packageIds.Count) packages to: $OutputPath" -ForegroundColor Green
+    Write-Host "Exported $($packageIds.Count) packages to: $OutputPath" -ForegroundColor Green
 } else {
-    Write-Host "⚠ WinGet export failed. Try running as Administrator." -ForegroundColor Yellow
+    Write-Host "Warning: WinGet export failed. Try running as Administrator." -ForegroundColor Yellow
 }
 
 Write-Host ""

@@ -1,30 +1,30 @@
 ---
-name: 🐛 Bug Report
+name: Bug Report
 about: Report a bug or unexpected behavior
 title: "[BUG] "
 labels: bug
 assignees: ""
 ---
 
-## 🐛 Bug Description
+## Bug Description
 
 A clear description of what the bug is.
 
-## 📋 Steps to Reproduce
+## Steps to Reproduce
 
 1. Go to '...'
 2. Run command '...'
 3. See error '...'
 
-## ✅ Expected Behavior
+## Expected Behavior
 
 What you expected to happen.
 
-## ❌ Actual Behavior
+## Actual Behavior
 
 What actually happened. Include any error messages or screenshots.
 
-## 📝 Log Output
+## Log Output
 
 <details>
 <summary>Click to expand log output</summary>
@@ -35,7 +35,7 @@ Paste your log file contents here (from /logs folder)
 
 </details>
 
-## 💻 Environment
+## Environment
 
 | Item | Value |
 |---|---|
@@ -44,6 +44,6 @@ Paste your log file contents here (from /logs folder)
 | **WinGet Version** | e.g., v1.6.10271 (`winget --version`) |
 | **Script** | e.g., Install-Apps.ps1 |
 
-## 📎 Additional Context
+## Additional Context
 
 Add any other context, screenshots, or files about the problem here.

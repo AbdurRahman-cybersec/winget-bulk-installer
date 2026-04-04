@@ -1,4 +1,4 @@
-# 📋 Detailed Setup Guide
+# Detailed Setup Guide
 
 This guide walks you through everything you need to get WinGet Bulk Installer running on your system.
 
@@ -171,14 +171,14 @@ cd C:\path\to\winget-bulk-installer
 ### What Happens Next
 
 The script will:
-1. ✅ Check that WinGet is installed
-2. ✅ Read your `packages.txt` file
-3. ▶ Process each app one-by-one:
+1. Check that WinGet is installed
+2. Read your `packages.txt` file
+3. Process each app one-by-one:
    - **Install** if not present
    - **Upgrade** if a newer version exists
    - **Skip** if already up to date
-4. 📊 Show a summary of results
-5. 📝 Save a timestamped log to the `/logs` folder
+4. Show a summary of results
+5. Save a timestamped log to the `/logs` folder
 
 ---
 
@@ -209,6 +209,6 @@ logs/
 
 ## Next Steps
 
-- 🔄 Set up [automatic weekly updates](TASK-SCHEDULER.md) with Task Scheduler
-- 📋 [Export your installed apps](../README.md#export-installedps1--export-your-current-setup) to replicate on another machine
-- 🔧 Check [Troubleshooting](TROUBLESHOOTING.md) if you hit any issues
+- Set up [automatic weekly updates](TASK-SCHEDULER.md) with Task Scheduler
+- [Export your installed apps](../README.md#export-installedps1--export-your-current-setup) to replicate on another machine
+- Check [Troubleshooting](TROUBLESHOOTING.md) if you hit any issues

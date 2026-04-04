@@ -1,10 +1,10 @@
-# 🤝 Contributing to WinGet Bulk Installer
+# Contributing to WinGet Bulk Installer
 
 First off, **thank you** for considering contributing! Every contribution helps make this tool better for the Windows community.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Code of Conduct](#-code-of-conduct)
 - [How Can I Contribute?](#-how-can-i-contribute)
@@ -16,26 +16,26 @@ First off, **thank you** for considering contributing! Every contribution helps 
 
 ---
 
-## 📜 Code of Conduct
+## Code of Conduct
 
 This project follows a simple rule: **be respectful and constructive**. We're all here to learn and build something useful together.
 
 ---
 
-## 🛠️ How Can I Contribute?
+## How Can I Contribute?
 
-### 🐛 Bug Reports
+### Bug Reports
 Found a bug? [Open an issue](https://github.com/your-username/winget-bulk-installer/issues/new?template=bug_report.md) using the bug report template.
 
-### 💡 Feature Requests
+### Feature Requests
 Have an idea? [Open a feature request](https://github.com/your-username/winget-bulk-installer/issues/new?template=feature_request.md) using the feature request template.
 
-### 📖 Documentation
+### Documentation
 - Fix typos or unclear instructions
 - Add examples or use cases
 - Improve the troubleshooting guide
 
-### 💻 Code Contributions
+### Code Contributions
 - Fix bugs listed in [Issues](https://github.com/your-username/winget-bulk-installer/issues)
 - Implement features from the roadmap
 - Improve error handling or logging
@@ -43,7 +43,7 @@ Have an idea? [Open a feature request](https://github.com/your-username/winget-b
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Fork** the repository
 2. **Clone** your fork:
@@ -68,7 +68,7 @@ Have an idea? [Open a feature request](https://github.com/your-username/winget-b
 
 ---
 
-## ✅ Pull Request Process
+## Pull Request Process
 
 1. Ensure your script runs without errors on a clean Windows 10/11 installation
 2. Update documentation if you've changed functionality
@@ -87,7 +87,7 @@ Refactor: description (code restructuring)
 
 ---
 
-## 🎨 Style Guidelines
+## Style Guidelines
 
 ### PowerShell Scripts
 
@@ -114,7 +114,7 @@ Refactor: description (code restructuring)
 
 ---
 
-## 🐛 Reporting Bugs
+## Reporting Bugs
 
 When reporting a bug, please include:
 
@@ -127,7 +127,7 @@ When reporting a bug, please include:
 
 ---
 
-## 💡 Suggesting Features
+## Suggesting Features
 
 When suggesting a feature, please describe:
 
@@ -138,10 +138,10 @@ When suggesting a feature, please describe:
 
 ---
 
-## ❓ Questions?
+## Questions?
 
 If you have questions about contributing, feel free to [open a discussion](https://github.com/your-username/winget-bulk-installer/discussions) or reach out by creating an issue.
 
 ---
 
-**Thank you for helping make WinGet Bulk Installer better! 🎉**
+**Thank you for helping make WinGet Bulk Installer better!**

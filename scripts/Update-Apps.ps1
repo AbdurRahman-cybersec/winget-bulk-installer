@@ -29,9 +29,9 @@ if (-not $LogPath) {
 }
 
 Write-Host ""
-Write-Host "╔══════════════════════════════════════════════════╗" -ForegroundColor Cyan
-Write-Host "║   WinGet Bulk Updater                            ║" -ForegroundColor Cyan
-Write-Host "╚══════════════════════════════════════════════════╝" -ForegroundColor Cyan
+Write-Host "====================================================" -ForegroundColor Cyan
+Write-Host "   WinGet Bulk Updater                            " -ForegroundColor Cyan
+Write-Host "====================================================" -ForegroundColor Cyan
 Write-Host ""
 
 Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Checking for updates..." -ForegroundColor Cyan
@@ -44,5 +44,5 @@ winget upgrade --all `
     --include-unknown 2>&1 | Tee-Object -FilePath $LogPath
 
 Write-Host ""
-Write-Host "[$(Get-Date -Format 'HH:mm:ss')] ✅ Update sweep complete!" -ForegroundColor Green
+Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Update sweep complete!" -ForegroundColor Green
 Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Log saved to: $LogPath" -ForegroundColor DarkGray

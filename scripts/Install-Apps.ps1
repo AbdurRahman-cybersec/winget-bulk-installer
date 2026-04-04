@@ -61,12 +61,12 @@ function Test-WinGetInstalled {
     return $false
 }
 
-# ── Pre-flight Checks ──────────────────────────────────────────────
+# Pre-flight Checks
 Write-Host ""
-Write-Host "╔══════════════════════════════════════════════════╗" -ForegroundColor Cyan
-Write-Host "║   WinGet Bulk Installer & Updater               ║" -ForegroundColor Cyan
-Write-Host "║   github.com/your-username/winget-bulk-installer ║" -ForegroundColor DarkCyan
-Write-Host "╚══════════════════════════════════════════════════╝" -ForegroundColor Cyan
+Write-Host "====================================================" -ForegroundColor Cyan
+Write-Host "   WinGet Bulk Installer & Updater               " -ForegroundColor Cyan
+Write-Host "   github.com/your-username/winget-bulk-installer" -ForegroundColor DarkCyan
+Write-Host "====================================================" -ForegroundColor Cyan
 Write-Host ""
 
 if (-not (Test-WinGetInstalled)) { exit 1 }
@@ -76,7 +76,7 @@ if (-not (Test-Path $PackageListPath)) {
     exit 1
 }
 
-# ── Read & Filter Package List ──────────────────────────────────────
+# Read & Filter Package List
 $apps = Get-Content $PackageListPath |
     Where-Object { $_ -and $_.Trim() -ne "" -and -not $_.TrimStart().StartsWith("#") } |
     ForEach-Object { $_.Trim() }
@@ -97,7 +97,7 @@ $skipped = 0
 $failedApps = @()
 
 foreach ($app in $apps) {
-    Write-Log "▶ Processing: $app" "Cyan"
+    Write-Log "Processing: $app" "Cyan"
 
     try {
         $output = winget install --id=$app `
@@ -112,27 +112,27 @@ foreach ($app in $apps) {
 
         if ($LASTEXITCODE -eq 0 -or $outputStr -match "No available upgrade" -or $outputStr -match "already installed") {
             if ($outputStr -match "No available upgrade" -or $outputStr -match "already installed") {
-                Write-Log "  ⏭ Already up to date: $app" "DarkGray"
+                Write-Log "  Already up to date: $app" "DarkGray"
                 $skipped++
             } else {
-                Write-Log "  ✅ Success: $app" "Green"
+                Write-Log "  Success: $app" "Green"
                 $success++
             }
         } else {
-            Write-Log "  ❌ Failed: $app (exit code $LASTEXITCODE)" "Red"
+            Write-Log "  Failed: $app (exit code $LASTEXITCODE)" "Red"
             $failed++
             $failedApps += $app
         }
     } catch {
-        Write-Log "  ❌ Exception: $app - $($_.Exception.Message)" "Red"
+        Write-Log "  Exception: $app - $($_.Exception.Message)" "Red"
         $failed++
         $failedApps += $app
     }
 }
 
-# ── Summary ─────────────────────────────────────────────────────────
+# Summary
 Write-Host ""
-Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkGray
+Write-Host "----------------------------------------------------" -ForegroundColor DarkGray
 Write-Log "SUMMARY" "White"
 Write-Log "  Total:     $($apps.Count)" "White"
 Write-Log "  Installed: $success" "Green"
